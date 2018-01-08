@@ -5,16 +5,13 @@
 #ifndef ECHIDIDY_ML_H
 #define ECHIDIDY_ML_H
 
-#include <array>
-
 class ML {
 private:
-    float parameter_list[];
-    float pro[];
+    float* parameter_list;
+    float* r_theta;
 public:
-    ML();
-    ~ML();
     int max_pro();
+    float* return_theta();
 };
 
 

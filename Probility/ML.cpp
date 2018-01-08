@@ -4,6 +4,10 @@
 
 #include "ML.h"
 
-ML::ML(){
+int ML::max_pro() {
+
+}
+
+float* ML::return_theta() {
 
 }
