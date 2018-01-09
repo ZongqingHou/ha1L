@@ -5,6 +5,7 @@
 #ifndef ECHIDIDY_TENSOR_H
 #define ECHIDIDY_TENSOR_H
 
+#include "Util.h"
 
 class Tensor {
 public:
@@ -15,6 +16,7 @@ public:
     virtual Tensor* operator*(Tensor){};
 
     virtual Tensor* T(){};
+    virtual void print(){};
 };
 
 

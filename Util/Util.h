@@ -5,8 +5,11 @@
 #ifndef ECHIDIDY_UTIL_H
 #define ECHIDIDY_UTIL_H
 
+#include <iostream>
+#include <malloc.h>
+#include <cstring>
 
-
-void inner_product (float* first1, float* last1, float* first2, float init);
+float inner_product (float*, int, float*);
+void print_list(float*, int);
 
 #endif //ECHIDIDY_UTIL_H

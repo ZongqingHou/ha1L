@@ -4,10 +4,20 @@
 
 #include "Util.h"
 
-void inner_product (float* first1, float* last1, float* first2, float init)
+float inner_product(float* first1, int length, float* first2)
 {
-    while (first1!=last1) {
-        init = init + (*first1)*(*first2);
-        ++first1; ++first2;
+    int index = 0;
+    float init = 0;
+    while (index < length) {
+        init += (*first1)*(*first2);
+        ++index; ++first2;
+    }
+    return init;
+}
+
+void print_list(float* list, int length){
+    int index;
+    for(index = 0; index < length;index++){
+        std::cout << list[index] <<std::endl;
     }
 }
