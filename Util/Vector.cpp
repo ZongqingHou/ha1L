@@ -4,7 +4,7 @@
 
 #include "Vector.h"
 
-Vector::Vector(int length, float *input_list) {
+Vector::Vector(int length, float * const input_list) {
     this->size = length;
     this->members = (float *) malloc(sizeof(float) * this->size);
     memcpy(this->members, input_list, sizeof(float *) * this->size);
@@ -26,7 +26,7 @@ Vector *Vector::operator+(Vector *input_list) {
     return new Vector(this->size, return_list);
 }
 
-Vector *Vector::operator-(Vector *input_list) {
+Vector *Vector::operator-(Vector * const input_list) {
     int index;
 
     if (this->size != input_list->size) {
@@ -96,4 +96,8 @@ void Vector::print() {
     for (index = 0; index < this->size; index++) {
         std::cout << this->members[index] << std::endl;
     }
+}
+
+int Vector::vec_size(void) {
+    return sizeof(int) + sizeof(float) * this->size;
 }

@@ -15,7 +15,6 @@ public:
     virtual Tensor* operator-(Tensor){};
     virtual Tensor* operator*(Tensor){};
 
-    virtual Tensor* T(){};
     virtual void print(){};
 };
 

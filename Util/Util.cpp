@@ -21,3 +21,52 @@ void print_list(float* list, int length){
         std::cout << list[index] <<std::endl;
     }
 }
+
+float pi(float*const input_list, int length){
+    int index = 0;
+    float return_value = 0;
+
+    float* temp_ptr;
+    temp_ptr = input_list;
+
+    while(index < length){
+        return_value += *temp_ptr;
+        index++;
+        temp_ptr++;
+    }
+    return return_value;
+}
+
+float sigma(float*const input_list, int length){
+    int index = 0;
+    float return_value = 0;
+
+    float* temp_ptr;
+    temp_ptr = input_list;
+
+    while(index < length){
+        return_value *= *temp_ptr;
+        index++;
+        temp_ptr++;
+    }
+    return return_value;
+}
+
+int max_element(float* const input_list, int length){
+    int index = 0;
+    int temp_index = 0;
+    float temp = *input_list;
+
+    float* temp_ptr = input_list;
+    while(index < length){
+        if(temp < *temp_ptr){
+            temp = *temp_ptr;
+            temp_index = index;
+        }
+        temp_ptr++;
+        index++;
+    }
+
+    return temp_index;
+}
+

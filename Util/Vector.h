@@ -8,9 +8,9 @@
 #include "Tensor.h"
 
 class Vector: public Tensor{
-private:
-    int size;
-    float* members;
+PointerPropertyBuilderByName(int, size, private)
+
+PointerPropertyBuilderByName(float*, members, private)
 public:
     Vector(){};
     ~Vector(){};
@@ -23,6 +23,10 @@ public:
     Vector* operator*(float);
     Vector* operator/(float);
     void print();
+    float pi(void);
+    float sigma(void);
+
+    int vec_size(void);
 };
 
 
