@@ -10,11 +10,23 @@
 
 #include "../Util/Util.h"
 #include "../Util/Matrix.h"
+#include "../Util/Vector.h"
+
+typedef struct {
+
+};
 
 class Bayes {
-PointerPropertyBuilderByName(Matrix*, prob, private)
+PointerPropertyBuilderByName(Matrix*, data_matrix, private)
 PointerPropertyBuilderByName(int, classification_index, private)
-PointerPropertyBuilderByName()
+PointerPropertyBuilderByName(Vector*, probility_vec,private)
+//PointerPropertyBuilderByName()
+
+public:
+    Bayes();
+    ~Bayes();
+    Bayes(Matrix*, int);
+    void cal_prob(void);
 };
 
 

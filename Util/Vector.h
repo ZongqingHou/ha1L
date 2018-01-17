@@ -9,7 +9,6 @@
 
 class Vector: public Tensor{
 PointerPropertyBuilderByName(int, size, private)
-
 PointerPropertyBuilderByName(float*, members, private)
 public:
     Vector(){};

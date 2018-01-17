@@ -70,3 +70,13 @@ int max_element(float* const input_list, int length){
     return temp_index;
 }
 
+template <class search>
+bool search_node(list* search_list, search search_item{
+    int index;
+    for(index = 0; index < search_list->length; index++){
+        if(search_list->list_ptr[index] == search_item){
+            return TRUE;
+        }
+    }
+    return FALSE;
+}

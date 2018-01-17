@@ -23,7 +23,7 @@ public:
 
     ~Matrix() {};
 
-    Matrix(int, int, float *);
+    Matrix(int, int, float *const);
 
     float *get_row(int);
 
